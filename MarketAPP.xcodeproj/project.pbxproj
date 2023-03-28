@@ -16,6 +16,7 @@
 		D67B6FF129D271E900514834 /* MarketAPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B6FF029D271E900514834 /* MarketAPPTests.swift */; };
 		D67B6FFB29D271E900514834 /* MarketAPPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B6FFA29D271E900514834 /* MarketAPPUITests.swift */; };
 		D67B6FFD29D271E900514834 /* MarketAPPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B6FFC29D271E900514834 /* MarketAPPUITestsLaunchTests.swift */; };
+		D67B700A29D27EDB00514834 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67B700929D27EDB00514834 /* Button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D67B6FF629D271E900514834 /* MarketAPPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarketAPPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D67B6FFA29D271E900514834 /* MarketAPPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketAPPUITests.swift; sourceTree = "<group>"; };
 		D67B6FFC29D271E900514834 /* MarketAPPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketAPPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D67B700929D27EDB00514834 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				D67B6FD929D271E800514834 /* AppDelegate.swift */,
 				D67B6FDB29D271E800514834 /* SceneDelegate.swift */,
 				D67B6FDD29D271E800514834 /* ViewController.swift */,
+				D67B700929D27EDB00514834 /* Button.swift */,
 				D67B6FDF29D271E800514834 /* Main.storyboard */,
 				D67B6FE229D271E900514834 /* Assets.xcassets */,
 				D67B6FE429D271E900514834 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 				D67B6FDE29D271E800514834 /* ViewController.swift in Sources */,
 				D67B6FDA29D271E800514834 /* AppDelegate.swift in Sources */,
 				D67B6FDC29D271E800514834 /* SceneDelegate.swift in Sources */,
+				D67B700A29D27EDB00514834 /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,9 +456,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = test.MarketAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -480,9 +487,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = test.MarketAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
