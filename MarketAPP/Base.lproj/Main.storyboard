@@ -28,10 +28,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Betrag in €" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dJz-Lj-rOH">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Betrag in €" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dJz-Lj-rOH">
                                                 <rect key="frame" x="162.66666666666663" y="33.333333333333329" width="214.33333333333337" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 <connections>
                                                     <action selector="artikelpreis:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="19v-gI-Pdt"/>
                                                 </connections>
@@ -55,14 +55,16 @@
                                                     <segment title="19%"/>
                                                 </segments>
                                                 <connections>
-                                                    <action selector="MwSt_auswahl:" destination="BYZ-38-t0r" eventType="valueChanged" id="RbY-zv-mbM"/>
+                                                    <action selector="MwStbestimmen:" destination="BYZ-38-t0r" eventType="valueChanged" id="SU8-GJ-TRu"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaF-UJ-NUB" customClass="Button" customModule="MarketAPP" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="180.66666666666666" width="361" height="35"/>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaF-UJ-NUB" customClass="Button" customModule="MarketAPP" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="181" width="361" height="82"/>
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Berechnen"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Berechnen">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                                </buttonConfiguration>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                         <color key="value" systemColor="systemGray4Color"/>
@@ -74,7 +76,17 @@
                                                         <real key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="Berechnen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JeF-29-DnQ"/>
+                                                </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Endpreis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yi6-MM-BID">
+                                                <rect key="frame" x="123" y="293" width="151" height="55"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -127,6 +139,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sPc-YG-Fho"/>
+                    <connections>
+                        <outlet property="Artikelpreis" destination="dJz-Lj-rOH" id="JTz-Cj-ZC2"/>
+                        <outlet property="Endpreis" destination="yi6-MM-BID" id="msD-xM-cCx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,6 +167,11 @@
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="jaF-UJ-NUB">
+            <size key="intrinsicContentSize" width="125.66666666666667" height="38"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
